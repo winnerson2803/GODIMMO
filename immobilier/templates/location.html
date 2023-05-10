@@ -1,0 +1,167 @@
+{% extends 'page_accueil.html'%}
+{% load static %}
+{% block content %}
+
+ <!--====== SERVICES PART START ======-->
+ <section id="features" class="services-area pt-120">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="section-title text-center pb-40">
+            <div class="line m-auto"></div>
+            <h3 class="title">
+              Une recherche plus facile dans vos recherches en immobiler,
+              <span> venez avec vos demandes et vos offres et vous serez satisfaits!</span>
+            </h3>
+          </div>
+          <!-- section title -->
+        </div>
+      </div>
+      <!-- row -->
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-7 col-sm-8">
+          <div
+            class="single-services text-center mt-30 wow fadeIn"
+            data-wow-duration="1s"
+            data-wow-delay="0.2s"
+          >
+            <div class="services-icon">
+              <img
+                class="shape"
+                src="{% static 'assets/images/téléchargement.png' %}"
+                alt="shape"
+              />
+              <!-- <img
+                class="shape-1"
+                src="{% static 'assets/images/services/services-shape-1.svg' %}"
+                alt="shape"
+              /> -->
+              <i class="lni lni-baloon"> </i>
+            </div>
+            <div class="services-content mt-30">
+              <h4 class="services-title">
+                <a href="javascript:void(0)">Location</a>
+              </h4>
+              <p class="text">
+              Locations journalieres, saisonnières,
+              et longue durée.
+              
+                
+              </p>
+              <a class="more" href="{% url 'location' %}"
+                >Plus de détails <i class="lni lni-chevron-right"> </i>
+              </a>
+            </div>
+          </div>
+          <!-- single services -->
+        </div>
+        <div class="col-lg-4 col-md-7 col-sm-8">
+          <div
+            class="single-services text-center mt-30 wow fadeIn"
+            data-wow-duration="1s"
+            data-wow-delay="0.5s"
+          >
+            <div class="services-icon">
+              <img
+                class="shape"
+                src="{% static 'assets/images/téléchargement.jfif' %}"
+                alt="shape"
+              />
+              <!-- <img
+                class="shape-1"
+                src="{% static 'assets/images/services/services-shape-2.svg' %}"
+                alt="shape"
+              /> -->
+              <!-- <i class="lni lni-cog"> </i> -->
+            </div>
+            <div class="services-content mt-30">
+              <h4 class="services-title">
+                <a href="javascript:void(0)">une jolie villa à louer </a>
+              </h4>
+              <p class="text">
+              composées de 3 chambres salon avec dépendance à un très bon prix.
+                
+              </p>
+              <a class="more" href="{% url 'vente' %}"
+                >Plus de détails <i class="lni lni-chevron-right"> </i>
+              </a>
+            </div>
+          </div>
+          <!-- single services -->
+        </div>
+        <div class="col-lg-4 col-md-7 col-sm-8">
+          <div
+            class="single-services text-center mt-30 wow fadeIn"
+            data-wow-duration="1s"
+            data-wow-delay="0.8s"
+          >
+            <div class="services-icon">
+              <img
+                class="shape"
+                src="{% static 'assets/images/services/services-shape.svg' %}"
+                alt="shape"
+              />
+              <img
+                class="shape-1"
+                src="{% static 'assets/images/services/services-shape-3.svg' %}"
+                alt="shape"
+              />
+              <i class="lni lni-bolt-alt"> </i>
+            </div>
+            <div class="services-content mt-30">
+              <h4 class="services-title">
+                <a href="javascript:void(0)">Rénovation</a>
+              </h4>
+              <p class="text">
+              Rénovations et constructions de biens immobiliers.
+              
+              </p>
+              <a class="more" href="javascript:void(0)"
+                >Learn More <i class="lni lni-chevron-right"> </i>
+              </a>
+            </div>
+          </div>
+          <!-- single services -->
+        </div>
+        <div class="col-lg-4 col-md-7 col-sm-8">
+            <div
+              class="single-services text-center mt-30 wow fadeIn"
+              data-wow-duration="1s"
+              data-wow-delay="0.5s"
+            >
+              <div class="services-icon">
+                <img
+                  class="shape"
+                  src="{% static 'assets/images/téléchargement.jfif' %}"
+                  alt="shape"
+                />
+                <!-- <img
+                  class="shape-1"
+                  src="{% static 'assets/images/services/services-shape-2.svg' %}"
+                  alt="shape"
+                /> -->
+                <!-- <i class="lni lni-cog"> </i> -->
+              </div>
+              <div class="services-content mt-30">
+                <h4 class="services-title">
+                  <a href="javascript:void(0)">une jolie villa à louer </a>
+                </h4>
+                <p class="text">
+                composées de 3 chambres salon avec dépendance à un très bon prix.
+                  
+                </p>
+                <a class="more" href="{% url 'vente' %}"
+                  >Plus de détails <i class="lni lni-chevron-right"> </i>
+                </a>
+              </div>
+            </div>
+            <!-- single services -->
+          </div>
+      </div>
+      <!-- row -->
+    </div>
+    
+    <!-- container -->
+  </section>
+
+{% endblock %}
