@@ -93,7 +93,7 @@
 
   // ========= glightbox
   const myGallery = GLightbox({
-    href: "https://www.youtube.com/watch?v=r44RKWyfcFw",
+    href: "https://www.youtube.com/watch?v=p62zBygd5RQ",
     type: "video",
     source: "youtube", //vimeo, youtube or local
     width: 900,
@@ -104,9 +104,9 @@
   const cu = new counterUp({
     start: 0,
     duration: 2000,
-    intvalues: true,
-    interval: 100,
-    append: "k",
+   // intvalues: true,
+    //interval: 100,
+    // append: "k",
   });
   cu.start();
 
