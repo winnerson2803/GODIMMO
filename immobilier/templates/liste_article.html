@@ -1,0 +1,67 @@
+{% extends 'page_accueil.html'%}
+{% load static %}
+{% block content %}
+
+ <!--====== SERVICES PART START ======-->
+ <section id="features" class="services-area pt-120">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="section-title text-center pb-40">
+            <div class="line m-auto"></div>
+            <h3 class="title">
+              Blog
+              <span></span>
+            </h3>
+          </div>
+          <!-- section title -->
+        </div>
+      </div>
+      <!-- row -->
+      <div class="row justify-content-center">
+        
+        {% for article in tous_les_articles %}
+      
+        <div class="col-lg-4 col-md-7 col-sm-8">
+            <div
+              class="single-services text-center mt-30 wow fadeIn"
+              data-wow-duration="1s"
+              data-wow-delay="0.5s"
+            >
+              <div class="services-icon">
+                <img
+                  class="shape"
+                  src="{{ article.image.url }}"
+                  alt="shape"
+                />
+                <!-- <img
+                  class="shape-1"
+                  src="{% static 'assets/images/services/services-shape-2.svg' %}"
+                  alt="shape"
+                /> -->
+                <!-- <i class="lni lni-cog"> </i> -->
+              </div>
+              <div class="services-content mt-30">
+                <h4 class="services-title">
+                  <a href="javascript:void(0)"> {{ article.titre }} </a>
+                </h4>
+                <p class="text">
+                {{ article.contenu|truncatewords:15}}
+                  
+                </p>
+                <a class="more" href="{% url 'detail_article' article.id %}" 
+                  >Plus de détails <i class="lni lni-chevron-right"> </i>
+                </a>
+              </div>
+            </div>
+            <!-- single services -->
+          </div>
+        {% endfor %}
+      </div>
+      <!-- row -->
+    </div>
+    
+    <!-- container -->
+  </section>
+
+{% endblock %}

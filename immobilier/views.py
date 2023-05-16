@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Article
 
 
 # Create your views here.
@@ -13,3 +14,15 @@ def vente(request):
 
 def renovation(request):
     return render(request, 'renovation.html')
+
+def liste_article(request):
+
+    tous_les_articles= Article.objects.all()
+    return render(request, 'liste_article.html', locals())
+
+
+
+def détail_article(request, pk):
+    article= Article.objects.get(id=pk)
+    return render(request, 'détail_article.html', locals())
+
