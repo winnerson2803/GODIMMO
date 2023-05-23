@@ -434,7 +434,7 @@
       <!--====== ABOUT PART START ======-->
       <div class="about-area pt-70">
         <div class="about-shape-2">
-          <img src="{% static 'assets/images/about/about-' %}" alt="shape" />
+          <img src="{% static 'assets/images/about/about-' %}" alt="" />
         </div>
         <div class="container">
           <div class="row align-items-center">
@@ -661,8 +661,9 @@
             </div>
             <div class="col-lg-6">
               <div class="subscribe-form mt-50">
-                <form action="#">
-                  <input type="text" placeholder="Enter eamil" />
+                <form method="post" action="{% url 'page_accueil' %}">
+                  {% csrf_token %}
+                  <input name="email" type="text" placeholder="Enter eamil" />
                   <button class="main-btn">Subscribe</button>
                 </form>
               </div>

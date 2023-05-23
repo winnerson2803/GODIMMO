@@ -1,9 +1,15 @@
 from django.shortcuts import render
-from .models import Article
+from .models import Article, Newsletter
+from .forms import FormulaireNewsletter
 
 
 # Create your views here.
 def page_accueil(request):
+    form=FormulaireNewsletter()
+    if request.method=='POST':
+        form= FormulaireNewsletter(request.POST)
+        if form .is_valid():
+            form.save()
     return render(request, 'page_accueil.html')
 
 def location(request):
@@ -25,4 +31,6 @@ def liste_article(request):
 def détail_article(request, pk):
     article= Article.objects.get(id=pk)
     return render(request, 'détail_article.html', locals())
+
+
 
